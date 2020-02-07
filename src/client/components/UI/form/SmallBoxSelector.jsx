@@ -23,7 +23,7 @@ class SmallBoxSelector extends Component {
     }
   }
 
-  handleClick = (e) => {
+  handleClick = () => {
     if(this.state.clicked) {
       this.setState({
         clicked: false,
@@ -40,16 +40,19 @@ class SmallBoxSelector extends Component {
   }
 
   render() {
+    const { label } = this.props;
+    const { bgColor, fontColor } = this.state;
+
     return (
       <ButtonBox
-        key={this.props.label}
+        key={label}
         style={{
-          backgroundColor: this.state.bgColor,
-          color: this.state.fontColor
+          backgroundColor: bgColor,
+          color: fontColor
         }}
         onClick={this.handleClick}
       >
-        {this.props.label}
+        {label}
       </ButtonBox>
     );
   }

@@ -16,7 +16,7 @@ const Listing = () => (
       bathrooms="2"
       description={[
         "Furnished 4 bedroom apartment available for sublet for the Summer 2020 term! Beautiful space with ensuite washroom. Close to many amenities and less than a 5 minute drive to Conestoga Mall. Building features include study spaces, rooftop terrace, wireless internet, bike storage, and visitor parking.",
-        "Furnished 4 bedroom apartment available for sublet for the Summer 2020 term! Beautiful space with ensuite washroom. Close to many amenities and less than a 5 minute drive to Conestoga Mall. Building features include study spaces, rooftop terrace, wireless internet, bike storage, and visitor parking.",
+        "Looking a group of 4 people to sublet all of the rooms in the unit. Price is negotiable, and a parking spot can be arranged. All utitilies are included except hydro. Last month's rent needed at the time of signing as a deposit. Subject to a $200 fee if you lose the keys.",
       ]}
       amenities={[
         "Utilities Included",

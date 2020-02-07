@@ -62,11 +62,11 @@ const Filters = () => (
         value="Bedrooms"
       />
       <Selector>
-      <SmallBoxSelector label="1" />
-      <SmallBoxSelector label="2" />
-      <SmallBoxSelector label="3" />
-      <SmallBoxSelector label="4" />
-      <SmallBoxSelector label="5+" />
+        <SmallBoxSelector label="1" />
+        <SmallBoxSelector label="2" />
+        <SmallBoxSelector label="3" />
+        <SmallBoxSelector label="4" />
+        <SmallBoxSelector label="5+" />
       </Selector>
       <SubLabel
         value="Bathrooms"
@@ -96,9 +96,6 @@ const Filters = () => (
     </Filter>
 
     <ButtonContainer>
-      <OutlinedPrimary
-        label="RESET"
-      />
       <PrimaryButton
         label="APPLY"
       />
