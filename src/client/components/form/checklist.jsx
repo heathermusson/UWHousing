@@ -2,7 +2,7 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import styled from 'styled-components';
 
-const labels = [
+const values = [
   "Furnished",
   "Ensuite Bathroom",
   "Baloncy",
@@ -17,9 +17,9 @@ const ChecklistContainer = styled.h3`
   font-size: 14px;
 `;
 
-const Checklist = () => (
+const Checklist = ( labels ) => (
   <ChecklistContainer>
-    {labels.map(label => (
+    {values.map(label => (
       <Form.Check
         key={label}
         style={{

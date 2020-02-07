@@ -4,7 +4,6 @@ import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 import Images from '../components/listing/Images.jsx';
 import Content from '../components/listing/Content.jsx';
-import styled from 'styled-components';
 
 const Listing = () => (
   <>

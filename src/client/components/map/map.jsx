@@ -11,7 +11,7 @@ const center = {
   lng: -80.539364,
 }
 
-const Map = ({ height, width, lat, lng, zoom }) => (
+const Map = ({ height, width, lat, lng, zoom, children }) => (
   <LoadScript
     id="script-loader"
     googleMapsApiKey="AIzaSyDab_sLiaBIu7GyZttjzMnNk7ewW57XR38"
@@ -20,12 +20,13 @@ const Map = ({ height, width, lat, lng, zoom }) => (
       id='property-map'
       mapContainerStyle={{
         width: {width},
-        height: {height},
+        height: '100%',
 
       }}
       zoom={zoom}
       center={center}
     >
+    {children}
     </GoogleMap>
   </LoadScript>
 );

@@ -39,7 +39,7 @@ const Header = () => (
     </h1>
     <ProfileLink href="/">
       <Icon
-        icon="home"
+        icon="user"
       />
     </ProfileLink>
 

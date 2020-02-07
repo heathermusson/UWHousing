@@ -82,7 +82,17 @@ const Filters = () => (
 
     <Filter>
       <Label value="Amenities" />
-      <CheckList />
+      <CheckList
+        labels={[
+          "Furnished",
+          "Ensuite Bathroom",
+          "Baloncy",
+          "A/C",
+          "Utilities Included",
+          "Ensuite Laundry",
+          "Gym"
+        ]}
+      />
     </Filter>
 
     <ButtonContainer>

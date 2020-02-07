@@ -1,6 +1,5 @@
 import React from 'react';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-import '../../styles/index.less';
 
 const center = {
   lat: 43.477680,

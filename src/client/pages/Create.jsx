@@ -5,19 +5,15 @@ import Footer from '../components/Footer.jsx';
 import PrimaryButton from '../components/buttons/Primary.jsx';
 import styled from 'styled-components';
 
-const CenteredRow = styled(Row)`
+const CreateContainer = styled(Container)`
+  height: 80vh;
+  min-height: 600px;
   display: flex;
   align-items: center;
 `;
 
 const MainImage = styled(Image)`
   width: 100%;
-`;
-
-const Title = styled.div`
-  font-size: 20px;
-  font-weight: 600;
-  padding-bottom: 20px;
 `;
 
 const Subtitle = styled.span`
@@ -33,20 +29,13 @@ const StyledForm = styled(Form)`
 const Create = () => (
   <>
     <Header />
-    <Container
-      style={{
-        height: '81vh',
-        minHeight: '600px',
-        display: 'flex',
-        alignItems: 'center'
-      }}
-    >
-      <CenteredRow>
+    <CreateContainer>
+      <Row>
         <Col sm={6}>
           <MainImage src="https://cdn.dribbble.com/users/1387827/screenshots/3810865/house-8.png" />
         </Col>
         <Col sm={6}>
-          <Title>Tell us about your property!</Title>
+          <h1>Tell us about your property!</h1>
           <StyledForm>
             <Form.Group controlId="propertyTitle">
               <Subtitle>Give your property a name</Subtitle>
@@ -110,7 +99,7 @@ const Create = () => (
 
             <Row>
               <Col>
-                <Form.Group controlId="propertyTerm">
+
                   <Form.Group controlId="propertyPrice">
                     <Subtitle>What is the rent price per month?</Subtitle>
                     <Form.Control
@@ -120,20 +109,22 @@ const Create = () => (
                       }}
                     />
                   </Form.Group>
-                </Form.Group>
+
               </Col>
               <Col>
-                <Subtitle>What term are you looking to sublet for?</Subtitle>
-                <Form.Control
-                  as="select"
-                  style={{
-                    fontSize: '14px'
-                  }}
-                >
-                  <option>Summer 2020</option>
-                  <option>Fall 2020</option>
-                  <option>Winter 2021</option>
-                </Form.Control>
+                <Form.Group controlId="propertyTerm">
+                  <Subtitle>What term are you looking to sublet?</Subtitle>
+                  <Form.Control
+                    as="select"
+                    style={{
+                      fontSize: '14px'
+                    }}
+                  >
+                    <option>Summer 2020</option>
+                    <option>Fall 2020</option>
+                    <option>Winter 2021</option>
+                  </Form.Control>
+                </Form.Group>
               </Col>
             </Row>
 
@@ -186,8 +177,8 @@ const Create = () => (
             />
           </StyledForm>
         </Col>
-      </CenteredRow>
-    </Container>
+      </Row>
+    </CreateContainer>
     <Footer />
   </>
 );

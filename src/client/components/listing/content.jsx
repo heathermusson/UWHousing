@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Map from '../map/Map.jsx';
+import ListingMap from './Map.jsx';
 import SideBar from './SideBar.jsx';
 import styled from 'styled-components';
 
@@ -57,7 +57,7 @@ const Icon = styled(FontAwesomeIcon)`
 `;
 
 
-const Content = ({ title, term, bedrooms, bathrooms, amenities, buildingAmenities }) => (
+const Content = ({ title, description, term, bedrooms, bathrooms, amenities, buildingAmenities }) => (
   <ContentContainer>
     <BreadcrumbRow>
       <Icon icon="chevron-left" /><Breadcrumb href="#">Back</Breadcrumb>
@@ -104,13 +104,7 @@ const Content = ({ title, term, bedrooms, bathrooms, amenities, buildingAmenitie
         <SectionTitle>
           Location
         </SectionTitle>
-        <Map
-          height="100%"
-          width="80vh"
-          lat={43.473565}
-          lng={-80.539364}
-          zoom={18}
-        />
+        <ListingMap />
       </Col>
       <Col
         sm={4}
