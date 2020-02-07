@@ -1,8 +1,8 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import Header from '../components/Header.jsx';
-import Filters from '../components/Filters.jsx';
-import Map from '../components/map/Map.jsx';
+import Filters from '../components/Home/Filters.jsx';
+import Map from '../components/UI/map/Map.jsx';
 import styled from 'styled-components';
 
 const FullPage = styled(Row)`

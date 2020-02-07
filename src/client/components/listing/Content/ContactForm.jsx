@@ -1,8 +1,8 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import ButtonContainer from '../buttons/ButtonContainer.jsx';
-import PrimaryButton from '../buttons/Primary.jsx';
+import ButtonContainer from '../../UI/buttons/ButtonContainer.jsx';
+import PrimaryButton from '../../UI/buttons/Primary.jsx';
 import styled from 'styled-components';
 
 const StyledForm = styled(Form)`

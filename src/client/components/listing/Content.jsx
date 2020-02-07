@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ListingMap from './Map.jsx';
-import SideBar from './SideBar.jsx';
+import ListingMap from './Content/Map.jsx';
+import SideBar from './Content/SideBar.jsx';
 import styled from 'styled-components';
 
 const ContentContainer = styled(Container)`

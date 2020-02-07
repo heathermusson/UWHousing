@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import SubLabel from './SubLabel.jsx';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 
 const ButtonBox = styled.div`
   display: flex;
-  height: 40px;
+  flex-direction: column;
   margin: 5px !important;
+  padding: 10px;
   flex: 1 !important;
   border-radius: 5px !important;
   align-items: center;
@@ -13,7 +14,11 @@ const ButtonBox = styled.div`
   cursor: pointer;
 `;
 
-class SmallBoxSelector extends Component {
+const ButtonImage = styled(FontAwesomeIcon)`
+  margin: 10px;
+`;
+
+class LargeBoxSelector extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -33,7 +38,7 @@ class SmallBoxSelector extends Component {
     } else {
       this.setState({
         clicked: true,
-        bgColor: "#1a3d75",
+        bgColor: "#2032a3",
         fontColor: "#ffffff"
       })
     }
@@ -42,16 +47,18 @@ class SmallBoxSelector extends Component {
   render() {
     return (
       <ButtonBox
+        key={this.props.label}
         style={{
           backgroundColor: this.state.bgColor,
           color: this.state.fontColor
         }}
         onClick={this.handleClick}
       >
-        Testing
+        <ButtonImage icon={this.props.icon} size="2x" />
+        <h3>{this.props.label}</h3>
       </ButtonBox>
     );
   }
 }
 
-export default SmallBoxSelector;
+export default LargeBoxSelector;

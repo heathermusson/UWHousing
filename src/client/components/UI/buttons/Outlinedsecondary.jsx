@@ -4,18 +4,18 @@ import styled from 'styled-components';
 
 const StyledButton = styled(Button)`
   margin: 5px;
-  background-color: #1a3d75;
-  border: none;
   font-size: 13px;
   width: 100px;
+  border: 1px solid;
+  border-color: #2032a3;
 `;
 
-const PrimaryButton = ({ label }) => (
+const OutlinedSecondary = ({ label }) => (
   <StyledButton
-    variant="primary"
+    variant="outlined-secondary"
   >
     {label}
   </StyledButton>
 );
 
-export default PrimaryButton;
+export default OutlinedSecondary;

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import Header from '../components/Header.jsx';
-import Footer from '../components/Footer.jsx';
-import Images from '../components/listing/Images.jsx';
-import Content from '../components/listing/Content.jsx';
+import Header from '../../components/Header.jsx';
+import Footer from '../../components/Footer.jsx';
+import Images from '../../components/Listing/Images.jsx';
+import Content from '../../components/Listing/Content.jsx';
 
 const Listing = () => (
   <>

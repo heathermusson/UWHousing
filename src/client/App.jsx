@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { withRouter, Route, NavLink, Switch } from 'react-router-dom';
 
 import HomePage from './pages/Home.jsx';
-import Listing from './pages/Listing.jsx';
-import Create from './pages/Create.jsx';
+import Listing from './pages/Listing/View.jsx';
+import Create from './pages/Listing/Create.jsx';
 
 const App = () => (
   <Switch>
