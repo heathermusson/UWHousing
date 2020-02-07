@@ -1,17 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
-
-const labels = ["Apartment","House"];
-
-const Selector = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-content: space-between;
-  align-item: center;
-  width: 100%;
-  text-align: center;
-`;
 
 const ButtonBox = styled.div`
   display: flex;
@@ -25,24 +14,15 @@ const ButtonBox = styled.div`
   justify-content: center;
 `;
 
-const ButtonImage = styled.div`
-  width: 40%;
-  height: 40px;
-  background-color: grey;
+const ButtonImage = styled(FontAwesomeIcon)`
+  margin: 10px;
 `;
 
-const LargeBoxSelector = () => (
-  <Selector>
-    {labels.map(label => (
-      <ButtonBox
-        key={label}
-      >
-        <ButtonImage />
-
-        <h3>{label}</h3>
-      </ButtonBox>
-    ))}
-  </Selector>
+const LargeBoxSelector = ( {label, icon} ) => (
+  <ButtonBox key={label}>
+    <ButtonImage icon={icon} size="2x" />
+    <h3>{label}</h3>
+  </ButtonBox>
 );
 
 export default LargeBoxSelector;

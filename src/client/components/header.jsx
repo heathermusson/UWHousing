@@ -8,6 +8,7 @@ const MenuBar = styled.div`
   padding: 25px 20px 15px 20px;
   justify-content: space-between;
   align-items: center;
+  height: 10vh;
 `;
 
 const ProfileLink = styled.a`
@@ -36,7 +37,7 @@ const Header = () => (
     <h1>
       <Logo href="/">UW Housing</Logo>
     </h1>
-    <ProfileLink href="/listing">
+    <ProfileLink href="/">
       <Icon
         icon="home"
       />

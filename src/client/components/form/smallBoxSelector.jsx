@@ -2,18 +2,6 @@ import React from 'react';
 import SubLabel from './SubLabel.jsx';
 import styled from 'styled-components';
 
-const labels = ["1","2","3","4","5","6+"];
-
-const Selector = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-content: space-between;
-  align-items: center;
-  width: 100%;
-  text-align: center
-`;
-
 const ButtonBox = styled.div`
   display: flex;
   height: 40px;
@@ -26,20 +14,9 @@ const ButtonBox = styled.div`
 `;
 
 const SmallBoxSelector = ({ label }) => (
-  <>
-    <SubLabel
-      value={label}
-    />
-    <Selector>
-      {labels.map(label => (
-        <ButtonBox
-          key={label}
-        >
-          {label}
-        </ButtonBox>
-      ))}
-    </Selector>
-  </>
+  <ButtonBox key={label}>
+    {label}
+  </ButtonBox>
 );
 
 export default SmallBoxSelector;

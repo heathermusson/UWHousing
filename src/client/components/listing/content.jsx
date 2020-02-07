@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ListingMap from './Map.jsx';
+import Map from '../map/Map.jsx';
 import SideBar from './SideBar.jsx';
 import styled from 'styled-components';
 
@@ -104,8 +104,13 @@ const Content = ({ title, term, bedrooms, bathrooms, amenities, buildingAmenitie
         <SectionTitle>
           Location
         </SectionTitle>
-        <ListingMap/>
-
+        <Map
+          height="100%"
+          width="80vh"
+          lat={43.473565}
+          lng={-80.539364}
+          zoom={18}
+        />
       </Col>
       <Col
         sm={4}

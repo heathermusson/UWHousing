@@ -1,6 +1,7 @@
 import React from 'react';
 import Col from 'react-bootstrap/Col'
 import Label from '../components/form/Label.jsx';
+import SubLabel from '../components/form/SubLabel.jsx';
 import LargeBoxSelector from '../components/form/LargeBoxSelector.jsx';
 import BudgetSlider from '../components/form/BudgetSlider.jsx';
 import SmallBoxSelector from '../components/form/SmallBoxSelector.jsx';
@@ -18,6 +19,16 @@ const Filter = styled.div`
   padding-top: 10px;
 `;
 
+const Selector = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: space-between;
+  align-item: center;
+  width: 100%;
+  text-align: center;
+`;
+
 const ButtonsContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -28,7 +39,16 @@ const Filters = () => (
   <FilterContainer sm={3}>
     <Filter>
       <Label value="Property Type" />
-      <LargeBoxSelector> </LargeBoxSelector>
+      <Selector>
+        <LargeBoxSelector
+          label="Apartment"
+          icon="building"
+        />
+        <LargeBoxSelector
+          label="House"
+          icon="home"
+        />
+      </Selector>
     </Filter>
 
     <Filter>
@@ -38,12 +58,26 @@ const Filters = () => (
 
     <Filter>
       <Label value="Property" />
-      <SmallBoxSelector
-        label="Bedrooms"
+      <SubLabel
+        value="Bedrooms"
       />
-      <SmallBoxSelector
-        label="Bathrooms"
+      <Selector>
+      <SmallBoxSelector label="1" />
+      <SmallBoxSelector label="2" />
+      <SmallBoxSelector label="3" />
+      <SmallBoxSelector label="4" />
+      <SmallBoxSelector label="5+" />
+      </Selector>
+      <SubLabel
+        value="Bathrooms"
       />
+      <Selector>
+        <SmallBoxSelector label="1" />
+        <SmallBoxSelector label="2" />
+        <SmallBoxSelector label="3" />
+        <SmallBoxSelector label="4" />
+        <SmallBoxSelector label="5+" />
+      </Selector>
     </Filter>
 
     <Filter>
