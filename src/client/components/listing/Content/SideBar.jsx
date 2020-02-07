@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import ContactForm from './ContactForm.jsx';
 import styled from 'styled-components';
@@ -10,21 +10,6 @@ const Container = styled.div`
 `;
 
 const SidebarRow = styled(Row)`
-`;
-
-const Name = styled.div`
-  font-size: 18px;
-  font-weight: bold;
-`;
-
-const Email = styled.span`
-  font-size: 14px;
-  font-weight: regular;
-  color: #686868;
-`;
-
-const ProfileImage = styled.svg`
-  width: 100%;
 `;
 
 const PriceContainer = styled.div`
@@ -44,17 +29,17 @@ const Price = styled.span`
   font-weight: bold;
 `;
 
-export default function SideBar (props) {
-  return (
-    <Container>
-      <Row>
-        <PriceContainer><Price>{props.price}</Price> {props.priceUnits}</PriceContainer>
-      </Row>
-      <SidebarRow>
-        <ContactForm
-          name={props.name}
-        />
-      </SidebarRow>
-    </Container>
-  )
-}
+const SideBar = ({ price, priceUnits, name }) => (
+  <Container>
+    <Row>
+      <PriceContainer><Price>{price}</Price> {priceUnits}</PriceContainer>
+    </Row>
+    <SidebarRow>
+      <ContactForm
+        name={name}
+      />
+    </SidebarRow>
+  </Container>
+);
+
+export default SideBar;
