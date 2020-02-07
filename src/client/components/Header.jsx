@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'react-bootstrap/Image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  Link } from "react-router-dom";
 import styled from 'styled-components';
 
 const MenuBar = styled.div`
@@ -9,12 +10,6 @@ const MenuBar = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 10vh;
-`;
-
-const ProfileLink = styled.a`
-  height: 100%;
-  width: 32px;
-  height: 32px;
 `;
 
 const Logo = styled.a`
@@ -37,11 +32,11 @@ const Header = () => (
     <h1>
       <Logo href="/">UW Housing</Logo>
     </h1>
-    <ProfileLink href="/">
+    <Link to="/listing">
       <Icon
         icon="user"
       />
-    </ProfileLink>
+    </Link>
 
   </MenuBar>
 );
