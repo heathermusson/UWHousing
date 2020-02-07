@@ -21,6 +21,7 @@ const Checklist = () => (
   <ChecklistContainer>
     {labels.map(label => (
       <Form.Check
+        key={label}
         style={{
           paddingBottom: '10px'
         }}
