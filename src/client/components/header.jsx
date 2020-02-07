@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import Image from 'react-bootstrap/Image'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from 'react';
+import Image from 'react-bootstrap/Image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 
 const MenuBar = styled.div`
@@ -31,26 +31,18 @@ const Icon = styled(FontAwesomeIcon)`
   float: right;
 `;
 
-const handleSelect = eventKey => alert(`selected ${eventKey}`);
+const Header = () => (
+  <MenuBar>
+    <h1>
+      <Logo href="/">UW Housing</Logo>
+    </h1>
+    <ProfileLink href="/listing">
+      <Icon
+        icon="home"
+      />
+    </ProfileLink>
 
-class Header extends Component {
-
-  render() {
-    return (
-      <MenuBar>
-        <h1>
-          <Logo href="/">UW Housing</Logo>
-        </h1>
-        <ProfileLink href="/listing">
-          <Icon
-            icon="home"
-            styles
-          />
-        </ProfileLink>
-
-      </MenuBar>
-    )
-  }
-}
+  </MenuBar>
+);
 
 export default Header;

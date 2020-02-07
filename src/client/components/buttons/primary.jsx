@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import styled from 'styled-components';
 
@@ -10,13 +10,12 @@ const StyledButton = styled(Button)`
   width: 100px;
 `;
 
-export default function PrimaryButton(props) {
+const PrimaryButton = ({ label }) => (
+  <StyledButton
+    variant="primary"
+  >
+    {label}
+  </StyledButton>
+);
 
-  return (
-    <StyledButton
-      variant="primary"
-    >
-      {props.label}
-    </StyledButton>
-  );
-}
+export default PrimaryButton;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import styled from 'styled-components';
 
@@ -10,13 +10,12 @@ const StyledButton = styled(Button)`
   border-color: #1a3d75;
 `;
 
-export default function OutlinedSecondary(props) {
+const OutlinedSecondary = ({ label }) => (
+  <StyledButton
+    variant="outlined-secondary"
+  >
+    {label}
+  </StyledButton>
+);
 
-  return (
-    <StyledButton
-      variant="outlined-secondary"
-    >
-      {props.label}
-    </StyledButton>
-  );
-}
+export default OutlinedSecondary;

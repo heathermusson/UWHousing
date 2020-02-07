@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import Image from 'react-bootstrap/Image';
+import React from 'react';
+import { Container, Row, Col, Image } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ListingMap from './Map.jsx';
 import SideBar from './SideBar.jsx';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import styled from 'styled-components';
 
 const ContentContainer = styled(Container)`
@@ -59,71 +57,71 @@ const Icon = styled(FontAwesomeIcon)`
 `;
 
 
-export default function Content (props) {
-  return (
-    <ContentContainer>
-      <BreadcrumbRow>
-        <Icon icon="chevron-left" /><Breadcrumb href="#">Back</Breadcrumb>
-      </BreadcrumbRow>
-      <Row>
-        <Col
-          sm={8}
-          style={{
-            padding: '0px'
-          }}
-        >
-          <h5>{props.title}</h5>
+const Content = ({ title, term, bedrooms, bathrooms, amenities, buildingAmenities }) => (
+  <ContentContainer>
+    <BreadcrumbRow>
+      <Icon icon="chevron-left" /><Breadcrumb href="#">Back</Breadcrumb>
+    </BreadcrumbRow>
+    <Row>
+      <Col
+        sm={8}
+        style={{
+          padding: '0px'
+        }}
+      >
+        <h5>{title}</h5>
 
-          <Subtitle>
-            <SubtitleItem>{props.term}</SubtitleItem>
-            <SubtitleItem>{props.bedrooms} Bedrooms</SubtitleItem>
-            <SubtitleItem>{props.bathrooms} Bathrooms</SubtitleItem>
-          </Subtitle>
+        <Subtitle>
+          <SubtitleItem>{term}</SubtitleItem>
+          <SubtitleItem>{bedrooms} Bedrooms</SubtitleItem>
+          <SubtitleItem>{bathrooms} Bathrooms</SubtitleItem>
+        </Subtitle>
 
-          <Description>
-            {props.description.map(paragraph => (
-              <p>{paragraph}</p>
-            ))}
-          </Description>
+        <Description>
+          {description.map(paragraph => (
+            <p>{paragraph}</p>
+          ))}
+        </Description>
 
-          <SectionTitle>
-            Amenities
-          </SectionTitle>
-          <Amenities>
-            {props.amenities.map(item => (
-              <Amenity>{item}</Amenity>
-            ))}
-          </Amenities>
+        <SectionTitle>
+          Amenities
+        </SectionTitle>
+        <Amenities>
+          {amenities.map(item => (
+            <Amenity>{item}</Amenity>
+          ))}
+        </Amenities>
 
-          <SectionTitle>
-            Building Amenities
-          </SectionTitle>
-          <Amenities>
-            {props.buildingAmenities.map(item => (
-              <Amenity>{item}</Amenity>
-            ))}
-          </Amenities>
+        <SectionTitle>
+          Building Amenities
+        </SectionTitle>
+        <Amenities>
+          {buildingAmenities.map(item => (
+            <Amenity>{item}</Amenity>
+          ))}
+        </Amenities>
 
-          <SectionTitle>
-            Location
-          </SectionTitle>
-          <ListingMap/>
+        <SectionTitle>
+          Location
+        </SectionTitle>
+        <ListingMap/>
 
-        </Col>
-        <Col
-          sm={4}
-          style={{
-            padding: '0px'
-          }}
-        >
-          <SideBar
-            name="John Smith"
-            email="jsmith@uwaterloo.ca"
-            price="$2400"
-            priceUnits="/month"
-          />
-        </Col>
-      </Row>
-    </ContentContainer>
-  );
-}
+      </Col>
+      <Col
+        sm={4}
+        style={{
+          padding: '0px'
+        }}
+      >
+        <SideBar
+          name="John Smith"
+          email="jsmith@uwaterloo.ca"
+          price="$2400"
+          priceUnits="/month"
+        />
+      </Col>
+    </Row>
+  </ContentContainer>
+);
+
+export default Content;

@@ -6,11 +6,10 @@ const Container = styled.div`
   justify-content: center;
 `;
 
-export default function PrimaryButton(props) {
+const ButtonContainer = ({ children }) => (
+  <Container>
+    {children}
+  </Container>
+);
 
-  return (
-    <Container>
-      {props.children}
-    </Container>
-  );
-}
+export default ButtonContainer;

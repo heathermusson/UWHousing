@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Col from 'react-bootstrap/Col'
 import Label from '../components/form/Label.jsx';
 import LargeBoxSelector from '../components/form/LargeBoxSelector.jsx';
@@ -24,46 +24,42 @@ const ButtonsContainer = styled.div`
   margin: 20px;
 `;
 
-class Filters extends Component {
-  render() {
-    return (
-      <FilterContainer sm={3}>
-        <Filter>
-          <Label value="Property Type" />
-          <LargeBoxSelector> </LargeBoxSelector>
-        </Filter>
+const Filters = () => (
+  <FilterContainer sm={3}>
+    <Filter>
+      <Label value="Property Type" />
+      <LargeBoxSelector> </LargeBoxSelector>
+    </Filter>
 
-        <Filter>
-          <Label value="Monthly Budget" />
-          <BudgetSlider />
-        </Filter>
+    <Filter>
+      <Label value="Monthly Budget" />
+      <BudgetSlider />
+    </Filter>
 
-        <Filter>
-          <Label value="Property" />
-          <SmallBoxSelector
-            label="Bedrooms"
-          />
-          <SmallBoxSelector
-            label="Bathrooms"
-          />
-        </Filter>
+    <Filter>
+      <Label value="Property" />
+      <SmallBoxSelector
+        label="Bedrooms"
+      />
+      <SmallBoxSelector
+        label="Bathrooms"
+      />
+    </Filter>
 
-        <Filter>
-          <Label value="Amenities" />
-          <CheckList />
-        </Filter>
+    <Filter>
+      <Label value="Amenities" />
+      <CheckList />
+    </Filter>
 
-        <ButtonContainer>
-          <OutlinedSecondary
-            label="RESET"
-          />
-          <PrimaryButton
-            label="APPLY"
-          />
-        </ButtonContainer>
-      </FilterContainer>
-    )
-  }
-}
+    <ButtonContainer>
+      <OutlinedSecondary
+        label="RESET"
+      />
+      <PrimaryButton
+        label="APPLY"
+      />
+    </ButtonContainer>
+  </FilterContainer>
+);
 
 export default Filters;

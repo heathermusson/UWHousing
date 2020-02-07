@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
-import { GoogleMap, LoadScript } from '@react-google-maps/api'
-import '../../styles/index.less';
+import React from 'react';
+import { GoogleMap, LoadScript } from '@react-google-maps/api';
 
 const mapStyles = {
   width: '100%',
@@ -12,28 +11,23 @@ const center = {
   lng: -80.539364,
 }
 
+const Map = () => (
+  <LoadScript
+    id="script-loader"
+    googleMapsApiKey="AIzaSyDab_sLiaBIu7GyZttjzMnNk7ewW57XR38"
+  >
+    <GoogleMap
+      id='property-map'
+      mapContainerStyle={{
+        width: '100%',
+        height: '100%',
 
-class TestMap extends Component {
-  render() {
-     return (
-      <LoadScript
-        id="script-loader"
-        googleMapsApiKey="AIzaSyDab_sLiaBIu7GyZttjzMnNk7ewW57XR38"
-      >
-        <GoogleMap
-          id='example-map'
-          mapContainerStyle={{
-            width: '100%',
-            height: '100%',
+      }}
+      zoom={15}
+      center={center}
+    >
+    </GoogleMap>
+  </LoadScript>
+);
 
-          }}
-          zoom={15}
-          center={center}
-        >
-        </GoogleMap>
-      </LoadScript>
-     )
-  }
-}
-
-export default TestMap;
+export default Map;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import SubLabel from './SubLabel.jsx';
 import styled from 'styled-components';
 
@@ -25,22 +25,21 @@ const ButtonBox = styled.div`
   justify-content: center;
 `;
 
-export default function SmallBoxSelector(props) {
+const SmallBoxSelector = ({ label }) => (
+  <>
+    <SubLabel
+      value={label}
+    />
+    <Selector>
+      {labels.map(label => (
+        <ButtonBox
+          key={label}
+        >
+          {label}
+        </ButtonBox>
+      ))}
+    </Selector>
+  </>
+);
 
-  return (
-    <>
-      <SubLabel
-        value={props.label}
-      />
-      <Selector>
-        {labels.map(label => (
-          <ButtonBox
-            key={label}
-          >
-            {label}
-          </ButtonBox>
-        ))}
-      </Selector>
-    </>
-  );
-}
+export default SmallBoxSelector;

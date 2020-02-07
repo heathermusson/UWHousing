@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components'
 
 const LabelContainer = styled.h4`
@@ -6,11 +6,10 @@ const LabelContainer = styled.h4`
   color: #909090;
 `;
 
-export default function SubLabel(props) {
+const SubLabel = ({ value }) => (
+  <LabelContainer>
+    {value}
+  </LabelContainer>
+);
 
-  return (
-    <LabelContainer>
-      {props.value}
-    </LabelContainer>
-  );
-}
+export default SubLabel;

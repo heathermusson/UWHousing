@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Container } from 'react-bootstrap';
-import Image from 'react-bootstrap/Image'
 import styled from 'styled-components';
 
 const ContentContainer = styled(Container)`
@@ -11,18 +10,13 @@ const ContentContainer = styled(Container)`
   color: #686868;
 `;
 
-class Footer extends Component {
-
-  render() {
-    return (
-      <>
-        <hr />
-        <ContentContainer>
-          <p>Copyright 2020 - UW Housing.</p>
-        </ContentContainer>
-      </>
-    )
-  }
-}
+const Footer = () => (
+  <>
+    <hr />
+    <ContentContainer>
+      <p>Copyright 2020 - UW Housing.</p>
+    </ContentContainer>
+  </>
+);
 
 export default Footer;

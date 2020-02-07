@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import ContactForm from './ContactForm.jsx';
 import styled from 'styled-components';
@@ -44,17 +44,17 @@ const Price = styled.span`
   font-weight: bold;
 `;
 
-export default function SideBar (props) {
-  return (
-    <Container>
-      <Row>
-        <PriceContainer><Price>{props.price}</Price> {props.priceUnits}</PriceContainer>
-      </Row>
-      <SidebarRow>
-        <ContactForm
-          name={props.name}
-        />
-      </SidebarRow>
-    </Container>
-  )
-}
+const SideBar = ({ price, priceUnits, name }) => (
+  <Container>
+    <Row>
+      <PriceContainer><Price>{price}</Price> {priceUnits}</PriceContainer>
+    </Row>
+    <SidebarRow>
+      <ContactForm
+        name={name}
+      />
+    </SidebarRow>
+  </Container>
+);
+
+export default SideBar;
