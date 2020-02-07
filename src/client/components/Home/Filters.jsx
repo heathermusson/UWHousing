@@ -8,7 +8,7 @@ import SmallBoxSelector from '../UI/form/SmallBoxSelector.jsx';
 import CheckList from '../UI/form/Checklist.jsx';
 import ButtonContainer from '../UI/buttons/ButtonContainer.jsx';
 import PrimaryButton from '../UI/buttons/Primary.jsx';
-import OutlinedSecondary from '../UI/buttons/OutlinedSecondary.jsx';
+import OutlinedPrimary from '../UI/buttons/OutlinedPrimary.jsx';
 import styled from 'styled-components';
 
 const FilterContainer = styled(Col)`
@@ -96,7 +96,7 @@ const Filters = () => (
     </Filter>
 
     <ButtonContainer>
-      <OutlinedSecondary
+      <OutlinedPrimary
         label="RESET"
       />
       <PrimaryButton

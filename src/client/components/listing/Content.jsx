@@ -21,6 +21,7 @@ const SubtitleItem = styled.span`
 
 const Description = styled.div`
   padding-top: 20px;
+  padding-bottom: 20px;
 `;
 
 const SectionTitle = styled.div`

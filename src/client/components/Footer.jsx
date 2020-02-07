@@ -7,7 +7,6 @@ const ContentContainer = styled(Container)`
   align-items: center;
   height: 10vh;
   padding: 0px;
-  font-size: 14px;
   color: #686868;
 `;
 
@@ -19,7 +18,7 @@ const Footer = () => (
   <>
     <Seperator />
     <ContentContainer>
-      <p>Copyright 2020 - UW Housing.</p>
+      <h4>Copyright 2020 - UW Housing.</h4>
     </ContentContainer>
   </>
 );

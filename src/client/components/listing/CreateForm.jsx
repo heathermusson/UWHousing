@@ -10,11 +10,6 @@ const CreateContainer = styled(Container)`
   align-items: center;
 `;
 
-const Subtitle = styled.span`
-  font-size: 14px;
-  font-weight: 500;
-`;
-
 const StyledForm = styled(Form)`
   font-size: 14px;
   font-weight: 500;
@@ -25,7 +20,7 @@ const CreateForm = () => (
     <h1>Tell us about your property!</h1>
     <StyledForm>
       <Form.Group controlId="propertyTitle">
-        <Subtitle>Give your property a name</Subtitle>
+        <h3>Give your property a name</h3>
         <Form.Control
           style={{
             fontSize: '14px'
@@ -35,7 +30,7 @@ const CreateForm = () => (
       </Form.Group>
 
       <Form.Group controlId="propertyDescription">
-        <Subtitle>Tell us more about it!</Subtitle>
+        <h3>Tell us more about it!</h3>
         <Form.Control
           as="textarea"
           rows="3"
@@ -48,7 +43,7 @@ const CreateForm = () => (
       <Row>
         <Col>
           <Form.Group controlId="propertyBedrooms">
-            <Subtitle>How many bedrooms are available?</Subtitle>
+            <h3>How many bedrooms are available?</h3>
             <Form.Control
               as="select"
               style={{
@@ -66,7 +61,7 @@ const CreateForm = () => (
         </Col>
         <Col>
           <Form.Group controlId="propertyBathrooms">
-            <Subtitle>How many bathrooms are there?</Subtitle>
+            <h3>How many bathrooms are there?</h3>
             <Form.Control
               as="select"
               style={{
@@ -88,7 +83,7 @@ const CreateForm = () => (
         <Col>
 
             <Form.Group controlId="propertyPrice">
-              <Subtitle>What is the rent price per month?</Subtitle>
+              <h3>What is the rent price per month?</h3>
               <Form.Control
                 placeholder="eg. $1200"
                 style={{
@@ -100,7 +95,7 @@ const CreateForm = () => (
         </Col>
         <Col>
           <Form.Group controlId="propertyTerm">
-            <Subtitle>What term are you looking to sublet?</Subtitle>
+            <h3>What term are you looking to sublet?</h3>
             <Form.Control
               as="select"
               style={{
@@ -118,7 +113,7 @@ const CreateForm = () => (
       <Row>
         <Col>
           <Form.Group controlId="propertyAmenities">
-            <Subtitle>Amenities</Subtitle>
+            <h3>Amenities</h3>
             <Form.Control
               as="select"
               multiple
@@ -141,7 +136,7 @@ const CreateForm = () => (
         </Col>
         <Col>
           <Form.Group controlId="buildingAmenities">
-            <Subtitle>Building Amenities</Subtitle>
+            <h3>Building Amenities</h3>
             <Form.Control
               as="select"
               multiple

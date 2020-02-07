@@ -14,7 +14,6 @@ const values = [
 
 const ChecklistContainer = styled.h3`
   margin: 5px;
-  font-size: 14px;
 `;
 
 const Checklist = ( labels ) => (

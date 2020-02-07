@@ -12,21 +12,6 @@ const Container = styled.div`
 const SidebarRow = styled(Row)`
 `;
 
-const Name = styled.div`
-  font-size: 18px;
-  font-weight: bold;
-`;
-
-const Email = styled.span`
-  font-size: 14px;
-  font-weight: regular;
-  color: #686868;
-`;
-
-const ProfileImage = styled.svg`
-  width: 100%;
-`;
-
 const PriceContainer = styled.div`
   display: flex;
   align-items: flex-end;

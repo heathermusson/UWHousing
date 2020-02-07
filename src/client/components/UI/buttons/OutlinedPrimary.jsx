@@ -10,12 +10,12 @@ const StyledButton = styled(Button)`
   border-color: #2032a3;
 `;
 
-const OutlinedSecondary = ({ label }) => (
+const OutlinedPrimary = ({ label }) => (
   <StyledButton
-    variant="outlined-secondary"
+    variant="outlined-primary"
   >
     {label}
   </StyledButton>
 );
 
-export default OutlinedSecondary;
+export default OutlinedPrimary;

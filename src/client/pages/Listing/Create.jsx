@@ -16,16 +16,6 @@ const MainImage = styled(Image)`
   width: 100%;
 `;
 
-const Subtitle = styled.span`
-  font-size: 14px;
-  font-weight: 500;
-`;
-
-const StyledForm = styled(Form)`
-  font-size: 14px;
-  font-weight: 500;
-`;
-
 const Create = () => (
   <>
     <Header />
