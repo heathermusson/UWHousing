@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import SubLabel from './SubLabel.jsx';
 import styled from 'styled-components';
 
@@ -7,16 +7,51 @@ const ButtonBox = styled.div`
   height: 40px;
   margin: 5px !important;
   flex: 1 !important;
-  background-color: #F0F0F0 !important;
   border-radius: 5px !important;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 `;
 
-const SmallBoxSelector = ({ label }) => (
-  <ButtonBox key={label}>
-    {label}
-  </ButtonBox>
-);
+class SmallBoxSelector extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      clicked: false,
+      bgColor: "#F0F0F0",
+      fontColor: "#000000"
+    }
+  }
+
+  handleClick = (e) => {
+    if(this.state.clicked) {
+      this.setState({
+        clicked: false,
+        bgColor: "#F0F0F0",
+        fontColor: "#000000"
+      })
+    } else {
+      this.setState({
+        clicked: true,
+        bgColor: "#1a3d75",
+        fontColor: "#ffffff"
+      })
+    }
+  }
+
+  render() {
+    return (
+      <ButtonBox
+        style={{
+          backgroundColor: this.state.bgColor,
+          color: this.state.fontColor
+        }}
+        onClick={this.handleClick}
+      >
+        Testing
+      </ButtonBox>
+    );
+  }
+}
 
 export default SmallBoxSelector;
