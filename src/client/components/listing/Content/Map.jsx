@@ -9,7 +9,7 @@ const center = {
 const ListingMap = () => (
   <LoadScript
     id="script-loader"
-    googleMapsApiKey="AIzaSyDab_sLiaBIu7GyZttjzMnNk7ewW57XR38"
+    googleMapsApiKey=<INSERTAPIKEYHERE>
   >
     <GoogleMap
       id='listing-map'
