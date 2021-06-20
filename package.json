@@ -44,7 +44,7 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "@react-google-maps/api": "^1.8.2",
     "@shopify/polaris": "^4.2.1",
-    "axios": "~0.18.0",
+    "axios": "~0.21.1",
     "babel-polyfill": "^6.26.0",
     "body-parser": "~1.18.3",
     "bootstrap": "^4.4.1",
